@@ -1,0 +1,134 @@
+{
+  "tests": [
+    {
+      "name": "Restricción: Confederaciones (No UEFA)",
+      "setup": "pip install -r requirements.txt",
+      "run": "PYTHONPATH=. pytest tests/test_constraints.py::test_confederation_constraint_non_uefa",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Restricción: Límite UEFA",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_constraints.py::test_uefa_limit",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Restricción: Bombos (Pots)",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_constraints.py::test_pot_constraint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Restricción: Tamaño del grupo (4 equipos)",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_constraints.py::test_group_size",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Restricción: Asignación válida general",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_constraints.py::test_valid_assignment",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Heurística: Selección MRV",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_heuristics.py::test_mrv_selection",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Heurística: MRV ignora variables asignadas",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_heuristics.py::test_mrv_with_assigned_variables",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Heurística: Forward Checking",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_heuristics.py::test_forward_checking",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Heurística: Fallo en Forward Checking",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_heuristics.py::test_forward_checking_failure",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Solver: Encuentra solución completa",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_solver.py::test_full_solution_found",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Solver: Solución cumple 4 equipos por grupo",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_solver.py::test_all_groups_have_4_teams",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Solver: Validez total de la solución",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_solver.py::test_solution_validity",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Solver: Backtracking sin preasignación",
+      "setup": "",
+      "run": "PYTHONPATH=. pytest tests/test_solver.py::test_backtracking_without_preassignment",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    }
+  ]
+}
